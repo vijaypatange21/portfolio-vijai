@@ -36,13 +36,20 @@
     </div>
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 nav-glass">
+    <nav id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 bg-slate-900/70 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <span class="font-display text-3xl font-semibold text-white tracking-[0.2em] uppercase">
-                    Vijai Patange
-                </span>
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                        VP
+                    </div>
+                    <span class="font-display text-3xl font-semibold tracking-[0.2em] uppercase text-white">
+                        Vijai Patange
+                    </span>
+                </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
@@ -90,7 +97,8 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white transition-colors p-2">
+                    <button id="mobile-menu-btn"
+                        class="bg-black/40 text-slate-300 hover:text-white transition-colors p-2">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -99,28 +107,26 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden bg-darker/95 backdrop-blur-xl border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl">
+            class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl rounded">
             <div class="px-6 py-8 space-y-6">
-                <a href="#home" class="block text-lg font-medium text-slate-300 hover:text-primary">Home</a>
-                <a href="#about" class="block text-lg font-medium text-slate-300 hover:text-primary">About</a>
-                <a href="#education" class="block text-lg font-medium text-slate-300 hover:text-primary">Education</a>
-                <a href="#skills" class="block text-lg font-medium text-slate-300 hover:text-primary">Skills</a>
-                <a href="#projects" class="block text-lg font-medium text-slate-300 hover:text-primary">Projects</a>
-                <a href="#achievements"
-                    class="block text-lg font-medium text-slate-300 hover:text-primary">Achievements</a>
-                <a href="#contact" class="block text-lg font-medium text-primary">Let's Connect</a>
+                <a href="#home" class="block text-lg font-medium text-white hover:text-primary">Home</a>
+                <a href="#about" class="block text-lg font-medium text-white hover:text-primary">About</a>
+                <a href="#education" class="block text-lg font-medium text-white hover:text-primary">Education</a>
+                <a href="#skills" class="block text-lg font-medium text-white hover:text-primary">Skills</a>
+                <a href="#projects" class="block text-lg font-medium text-white hover:text-primary">Projects</a>
+                <a href="#achievements" class="block text-lg font-medium text-white hover:text-primary">Achievements</a>
+                <a href="#contact" class="block text-lg font-medium text-white hover:text-primary">Let's Connect</a>
             </div>
         </div>
     </nav>
 
     <!-- Welcome / Home Section -->
-    <section id="home"
-        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-fixed"
+    <section id="home" class="min-h-screen flex items-center justify-center relative bg-cover bg-center bg-fixed"
         style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-darker/70 backdrop-blur-[2px]"></div>
 
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <div class="relative z-10 text-center px-6 pt-10 max-w-6xl mx-auto">
             <div class="reveal active">
                 <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6 tracking-tight">
                     Vijai Patange
@@ -579,19 +585,26 @@
                 <form onsubmit="handleForm(event)" class="space-y-4 max-w-md mx-auto text-left">
                     <div class="grid grid-cols-2 gap-4">
                         <input type="text" id="name" placeholder="Name" required
-                            class="w-full px-5 py-3.5 rounded-xl bg-slate-800 text-white caret-whiteborder border-slate-600focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 placeholder-slate-400 transition-all">
+                            class="w-full px-5 py-3.5 rounded-xl bg-slate-800 text-white border border-slate-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 placeholder-slate-400 transition-all">
 
                         <input type="email" id="email" placeholder="Email" required
-                            class="w-full px-5 py-3.5 rounded-xl bg-slate-800 text-white caret-whiteborder border-slate-600focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 placeholder-slate-400 transition-all">
+                            class="w-full px-5 py-3.5 rounded-xl bg-slate-800 text-white border border-slate-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 placeholder-slate-400 transition-all">
                     </div>
 
                     <textarea id="message" rows="3" placeholder="Message..." required
                         class="w-full px-5 py-3.5 rounded-xl bg-slate-900 text-white border border-slate-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 placeholder-slate-500 caret-white resize-none transition-all duration-300"></textarea>
 
                     <button type="submit"
-                        class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-4 rounded-xl shadow-lg shadow-purple-500/25 transition-all hover:scale-[1.02] hover:shadow-purple-500/40">
-                        Send Message
+                        class="w-full relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 rounded-xl shadow-[0_10px_30px_rgba(139,92,246,0.35)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_20px_rgba(139,92,246,0.55)] active:scale-[0.98]">
+
+                        <span class="relative z-10 tracking-wide">
+                            Send Message
+                        </span>
+
+                        <span
+                            class="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
                     </button>
+
                 </form>
             </div>
         </div>
